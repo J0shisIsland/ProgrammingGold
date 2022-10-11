@@ -1,0 +1,119 @@
+<html>
+<head>
+    <!-- Bootstrap Reference-->
+
+    <!-- Stylesheet Link-->
+    <link href="css.css" rel="Stylesheet">
+</head>
+<body>
+    <h1>Heading One</h1>
+  
+    <p> Paragraph with 
+        <br>line break.
+    </p>
+    
+    <h2>1. Links</h2>
+    
+    <a href="https://www.w3schools.com/html/">Link to w3schools tutorial</a>
+    <br>
+    <br>
+    <img src="Profilbild.jpg" alt="Photo of myself" title="Photo of myself" width="70" height="70">
+
+    <h2>2. Lists</h2>  
+
+    <h3>Unordered List</h3>
+  
+    <ul>
+		<li>Element 1</li>
+		<li>Element 2</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+
+    <ol>
+		<li>Element 1</li>
+		<li>Element 2</li>
+    </ol>
+
+    <h2>3. Forms</h2>
+    <!--Form-handler (file with script for processing input data) is specified in action attribute-->
+    <form action="/form_input_script.php" method="post" autocomplete="on">
+        <label for="txtbox">Free textbox</label><br>
+        <input type="text" id="txtbox" name="txtbox" placeholder="Enter Text."><br>
+        <!--Name attribute is required in order for value to be submitted!-->
+        <label>Pre-defined options</label><br>
+        <input list="orchestras" autofocus>
+        <datalist id="orchestras">
+            <option value="DUCE"></option>
+            <option value="DUOS"></option>
+            <option value="DUPO"></option>
+            <option value="Hill Orchestra"></option>
+        </datalist><br>
+        <br>
+        <label>Single Choice</label><br>
+        <input type="radio" id="pop" name="fav_genre" value="Pop" required>
+        <label for="pop">Pop</label><br>
+        <input type="radio" id="rock" name="fav_genre" value="Rock">
+        <label for="rock">Rock</label><br>
+        <input type="radio" id="classical" name="fav_genre" value="Classical">
+        <label for="classical">Classical</label><br>
+        <br>
+        <label>Multiple Choice</label><br>
+        <input type="checkbox" id="ingredient1" name="ingredient1" value="Cheese">
+        <label for="ingredient1">Extra Cheese</label><br>
+        <input type="checkbox" id="ingredient2" name="ingredient2" value="Shrooms">
+        <label for="ingredient2">Extra Mushrooms</label><br>
+        <br>
+        <fieldset>
+            <legend>Clickable Buttons:</legend>
+            <input type="button" value="Click Me!" onclick="alert('Hello World!')"><br>
+            <br>
+            <button type="button" onclick="alert('Yay!')">No, click me!</button><br>
+        </fieldset>
+        <br>
+        <label for="occupation">Drop-down list:</label>
+        <select id="occupation" name="occupation" size="3">
+            <option value="pupil">Pupil</option>
+            <option value="student">Student</option>
+            <option value="employed">Employed</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="default" selected>Default</option>
+        </select><br>
+        <br>
+        <textarea name="message" rows="10" cols="50">
+            Leave your message here.
+        </textarea><br>
+        <br>
+        <label>Submit Button</label>
+        <input type="submit" value="Submit">
+        <input type="reset"><br>
+        <input type="submit" formtarget="_blank" value="Submit to a new tab"
+    </form>
+
+    <h3>Dynamic Output</h3>
+
+    <form action="/form_input_script.php"
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+
+        0
+        <input type="range" id="a" name="a" min="0" max="100" value="50">
+        100 +
+        <input type="number" id="b" name="b" min="0" max="100" value="50">
+        =
+        <output name="x" for="a b"></output>
+    </form>
+
+    <h2>CSS Style Sheets</h2>
+    <div id="box">
+        <p> This is a box. </p>
+    </div>
+
+    <div class = "box2">
+        <p> This is another box. </p>
+    </div>
+
+    <div class = "box2">
+        <p> This is not a box. </p>
+    </div>
+</body>
+</html>
